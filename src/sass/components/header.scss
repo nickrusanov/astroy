@@ -1,0 +1,78 @@
+.header {
+	margin-top: 35px;
+
+	&__inner {
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+	}
+
+	&__logo-link {
+	}
+
+	&__logo-img {
+		width: 42px;
+	}
+
+	&__logo-descr {
+		max-width: 240px;
+
+		font-size: .8rem;
+		font-weight: 400;
+	}
+
+	&__social-descr {
+		max-width: 150px;
+
+		font-weight: 400;
+		font-size: 0.8rem;
+		text-align: center;
+	}
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__phone {
+	}
+
+	&__phone-link {
+		font-weight: 700;
+
+		color: var(--color-primary);
+	}
+
+	&__phone-descr {
+		padding-left: 17px;
+
+		position: relative;
+
+		font-size: .6rem;
+		font-weight: 400;
+
+		&::before {
+			content: '';
+			width: 10px;
+			height: 10px;
+
+			position: absolute;
+			left: 0;
+			top: 2px;
+
+			background-color: #22C74E;
+			border-radius: 100%;
+		}
+	}
+
+	&__btn-main {
+		
+	}
+}
