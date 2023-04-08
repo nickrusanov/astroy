@@ -10,4 +10,5 @@
 
 @include font-face("Gilroy", "#{$fonts-root}Gilroy-Light", normal, 300);
 @include font-face("Gilroy", "#{$fonts-root}Gilroy-Regular", normal, 400);
+@include font-face("Gilroy", "#{$fonts-root}Gilroy-Medium", normal, 500);
 @include font-face("Gilroy", "#{$fonts-root}Gilroy-Bold", normal, 700);
