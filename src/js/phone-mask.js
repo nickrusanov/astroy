@@ -32,5 +32,19 @@ $(window).on('load', function () {
 				})
 			}
 		});
+
+		$('input[type="tel"]').focus(function () {
+			$(this).setCursorPosition(4);
+
+			if ($(this).hasClass('input')) {
+				$('.phone').addClass('phone--active');
+
+				$(this).on('blur', () => {
+					if ($(this).val().length === 0) {
+						$(this).removeClass('phone--active');
+					}
+				})
+			}
+		});
 	}
 })

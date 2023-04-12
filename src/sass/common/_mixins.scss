@@ -1,3 +1,47 @@
+// APPEAR
+
+@mixin trans-appear($transition-duration: 0.3s) {
+	transition: all $transition-duration ease, transform calc($transition-duration * 2) ease;
+}
+
+@mixin appear-down($transition-duration: 0.3s) {
+	@include trans-appear($transition-duration);
+
+	&.hidden {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+}
+
+@mixin appear-right($transition-duration: 0.3s, $transform-value: 15%) {
+	@include trans-appear($transition-duration);
+
+	&.hidden {
+		transform: translateX($transform-value);
+		opacity: 0;
+	}
+}
+
+@mixin appear-left($transition-duration: 0.3s, $transform-value: -15%) {
+	@include trans-appear($transition-duration);
+
+	&.hidden {
+		transform: translateX($transform-value);
+		opacity: 0;
+	}
+}
+
+@mixin appear-scale($transition-duration: 0.3s) {
+	@include trans-appear($transition-duration);
+
+	&.hidden {
+		transform: scale(0.2);
+		opacity: 0;
+	}
+}
+
+// MEDIA
+
 @mixin sm {
 	@media (max-width: $screen-sm) {
 		@content;

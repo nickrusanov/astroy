@@ -18,7 +18,7 @@ $(window).on('load', function () {
 		arrows: true,
 		infinite: true,
 		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 3500,
 		speed: 1000,
 		slidesToShow: 5,
 		slidesToScroll: 1,

@@ -7,6 +7,8 @@
 }
 
 %title-1 {
+	@include appear-down;
+
 	font-size: var(--font-size-title);
 	font-weight: 400;
 	line-height: 1.2;
@@ -25,6 +27,8 @@
 }
 
 %title-3 {
+	@include appear-down;
+
 	font-size: var(--font-size-title-2);
 	font-weight: 700;
 }
@@ -37,6 +41,8 @@
 }
 
 %subtitle {
+	@include appear-down;
+
 	font-weight: 400;
 	font-size: var(--font-size-subtitle);
 }

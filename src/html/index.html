@@ -15,38 +15,52 @@
 		@@include('./components/header.html')
 
 		<main class="main">
-			<section class="banner">
+			<section class="banner" id="banner">
 				<div class="container">
-					<div class="banner__content">
-						<h1 class="banner__title">
-							Дизайн интерьера, ремонт жилой и коммерческой недвижимости
-							<span>под ключ в Тюмени</span>
-						</h1>
+					<div class="banner__inner">
+						<div class="banner__content">
+							<h1 class="banner__title hidden">
+								Дизайн интерьера, ремонт жилой и коммерческой недвижимости
+								<span>под ключ в Тюмени</span>
+							</h1>
 
-						<p class="banner__text">
-							Выполним ремонт точно в срок с гарантией по договору
-						</p>
+							<p class="banner__text hidden">
+								Выполним ремонт точно в срок с гарантией по договору
+							</p>
 
-						<a class="banner__btn btn" href="#calculator">
-							<span>Рассчитать стоимость ремонта</span>
-							<div class="btn-inner"></div>
-							<div class="banner__btn-img"></div>
-						</a>
+							<a class="banner__btn btn hidden" href="#calculator">
+								<span class="btn__text">Рассчитать стоимость ремонта</span>
+								<div class="btn__inner"></div>
+								<div class="banner__btn-img"></div>
+							</a>
+						</div>
+
+						<div class="banner__down-wrapper">
+							<a class="banner__down hidden" href="#portfolio">
+								<svg class="banner__down-icon" width="30" height="18" viewBox="0 0 30 18" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<rect x="2.97925" y="0.878662" width="20" height="3" rx="1.5"
+										transform="rotate(45 2.97925 0.878662)" />
+									<rect x="29.1421" y="3" width="20" height="3" rx="1.5" transform="rotate(135 29.1421 3)" />
+								</svg>
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="portfolio">
+
+			<section class="portfolio" id="portfolio">
 				<div class="container">
 					<div class="portfolio__inner">
-						<h2 class="portfolio__title">
+						<h2 class="portfolio__title hidden">
 							С <span>2015 года</span> отремонтировали более <span>160 объектов</span>
 						</h2>
 
-						<p class="portfolio__text">От небольших студий до ресторанов на высоте 100 метров</p>
+						<p class="portfolio__text hidden">От небольших студий до ресторанов на высоте 100 метров</p>
 
 						<ul class="portfolio__list">
-							<li class="portfolio__item">
+							<li class="portfolio__item hidden">
 								<a class="portfolio__item-link" href="#">
 									<picture>
 										<source srcset="./img/content/portfolio-1.webp" type="image/webp">
@@ -65,7 +79,7 @@
 								</a>
 							</li>
 
-							<li class="portfolio__item">
+							<li class="portfolio__item hidden">
 								<a class="portfolio__item-link" href="#">
 									<picture>
 										<source srcset="./img/content/portfolio-3.webp" type="image/webp">
@@ -84,7 +98,7 @@
 								</a>
 							</li>
 
-							<li class="portfolio__item">
+							<li class="portfolio__item hidden">
 								<a class="portfolio__item-link" href="#">
 									<picture>
 										<source srcset="./img/content/portfolio-2.webp" type="image/webp">
@@ -103,7 +117,7 @@
 								</a>
 							</li>
 
-							<li class="portfolio__item">
+							<li class="portfolio__item hidden">
 								<a class="portfolio__item-link" href="#">
 									<picture>
 										<source srcset="./img/content/portfolio-4.webp" type="image/webp">
@@ -123,32 +137,33 @@
 							</li>
 						</ul>
 
-						<a class="btn portfolio__btn" href="#">
-							получить консультацию
-							<div class="btn-inner"></div>
+						<a class="btn portfolio__btn hidden" href="#consultation" data-link="modal">
+							<span class="btn__text">получить консультацию</span>
+							<div class="btn__inner"></div>
 						</a>
 
 						<picture>
 							<source srcset="./img/home/paint.webp" type="image/webp">
-							<img class="portfolio__img parallax" src="./img/home/paint.png" alt="Краска и кисти" data-parallax="225">
+							<img class="portfolio__img parallax hidden" src="./img/home/paint.png" alt="Краска и кисти"
+								data-parallax="150">
 						</picture>
 					</div>
 				</div>
 			</section>
 
 
-			<section class="brands">
+			<section class="brands" id="brands">
 				<div class="container">
 					<div class="brands__inner">
-						<h2 class="brands__title">
+						<h2 class="brands__title hidden">
 							Используем только лучшие метериалы от <span>80+</span> Мировых производителей
 						</h2>
 
-						<p class="brands__text">
+						<p class="brands__text hidden">
 							Некоторые из них:
 						</p>
 
-						<div class="brands__slider">
+						<div class="brands__slider hidden">
 							<div class="brands__slider-item">
 								<div class="brands__slider-item-inner">
 									<picture>
@@ -294,39 +309,39 @@
 							</div>
 						</div>
 
-						<button class="brands__btn btn" type="button">
-							ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
-							<div class="btn-inner"></div>
-						</button>
+						<a class="brands__btn btn hidden" href="#consultation" data-link="modal">
+							<span class="btn__text">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</span>
+							<div class="btn__inner"></div>
+						</a>
 
 						<picture>
 							<source srcset="./img/home/brands-1.webp" type="image/webp">
-							<img class="brands__img brands__img--left parallax" src="./img/home/brands-1.png" alt="Тележка"
-								data-parallax="200">
+							<img class="brands__img brands__img--left parallax hidden" src="./img/home/brands-1.png" alt="Тележка"
+								data-parallax="125">
 						</picture>
 
 						<picture>
 							<source srcset="./img/home/brands-2.webp" type="image/webp">
-							<img class="brands__img brands__img--right parallax" src="./img/home/brands-2.png" alt="Краска"
-								data-parallax="200">
+							<img class="brands__img brands__img--right parallax hidden" src="./img/home/brands-2.png" alt="Краска"
+								data-parallax="125">
 						</picture>
 					</div>
 				</div>
 			</section>
 
 
-			<section class="tariffs">
+			<section class="tariffs" id="tariffs">
 				<div class="container">
-					<h2 class="tariffs__title">
+					<h2 class="tariffs__title hidden">
 						Предлагаем самые <span>выгодные решения</span> для наших клиентов
 					</h2>
 
-					<p class="tariffs__text">
+					<p class="tariffs__text hidden">
 						Выберите тариф, который вам подходит
 					</p>
 
 					<ul class="tariffs__list">
-						<li class="tariffs__item">
+						<li class="tariffs__item hidden">
 							<div class="tariffs__item-content">
 								<picture class="tariffs__item-picture">
 									<source srcset="./img/home/tariff-1.webp" type="image/webp">
@@ -343,15 +358,15 @@
 									</p>
 
 									<ul class="tariffs__service-list">
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Стены и обои
 										</li>
 
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Пол: ламинат или кварцвинил
 										</li>
 
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Сан. узел - плитка
 										</li>
 									</ul>
@@ -359,13 +374,13 @@
 							</div>
 
 							<a class="btn tariffs__btn" href="#calculator" data-tariff="econom">
-								выбрать
-								<div class="btn-inner"></div>
+								<span class="btn__text">выбрать</span>
+								<div class="btn__inner"></div>
 							</a>
 						</li>
 
 
-						<li class="tariffs__item">
+						<li class="tariffs__item hidden">
 							<div class="tariffs__item-content">
 								<picture class="tariffs__item-picture">
 									<source srcset="./img/home/tariff-2.webp" type="image/webp">
@@ -382,19 +397,19 @@
 									</p>
 
 									<ul class="tariffs__service-list">
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Стены и обои
 										</li>
 
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Пол: ламинат или кварцвинил
 										</li>
 
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Сан. узел - плитка
 										</li>
 
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Сантехника и электрика
 										</li>
 									</ul>
@@ -402,13 +417,13 @@
 							</div>
 
 							<a class="btn tariffs__btn" href="#calculator" data-tariff="comfort">
-								выбрать
-								<div class="btn-inner"></div>
+								<span class="btn__text">выбрать</span>
+								<div class="btn__inner"></div>
 							</a>
 						</li>
 
 
-						<li class="tariffs__item">
+						<li class="tariffs__item hidden">
 							<div class="tariffs__item-content">
 								<picture class="tariffs__item-picture">
 									<source srcset="./img/home/tariff-3.webp" type="image/webp">
@@ -425,27 +440,27 @@
 									</p>
 
 									<ul class="tariffs__service-list">
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Стены и обои
 										</li>
 
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Пол: ламинат или кварцвинил
 										</li>
 
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Сан. узел - плитка
 										</li>
 
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Сантехника и электрика
 										</li>
 
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Натяжные потолки
 										</li>
 
-										<li class="tariffs__service-item">
+										<li class="tariffs__service-item hidden">
 											Монтаж люстр, раковин, санфоянсоф и т.д.
 										</li>
 									</ul>
@@ -453,27 +468,27 @@
 							</div>
 
 							<a class="btn tariffs__btn" href="#calculator" data-tariff="euro">
-								выбрать
-								<div class="btn-inner"></div>
+								<span class="btn__text">выбрать</span>
+								<div class="btn__inner"></div>
 							</a>
 						</li>
 					</ul>
 
-					<a class="tariffs__link" href="#">
+					<a class="tariffs__link hidden" href="#consultation" data-link="modal">
 						Не нашли нужного тарифа? Напишите нам!
 					</a>
 				</div>
 			</section>
 
 
-			<section class="why">
+			<section class="why" id="why">
 				<div class="container">
-					<h2 class="why__title">
+					<h2 class="why__title hidden">
 						Почему нам <span>доверяют?</span>
 					</h2>
 
 					<ul class="why__list">
-						<li class="why__item">
+						<li class="why__item hidden">
 							<picture>
 								<source srcset="./img/home/why-1.webp" type="image/webp">
 								<img class="why__item-img" src="./img/home/why-1.jpg" alt="Оборудование">
@@ -488,7 +503,7 @@
 							</div>
 						</li>
 
-						<li class="why__item">
+						<li class="why__item hidden">
 							<picture>
 								<source srcset="./img/home/why-2.webp" type="image/webp">
 								<img class="why__item-img" src="./img/home/why-2.jpg" alt="Материалы">
@@ -503,7 +518,7 @@
 							</div>
 						</li>
 
-						<li class="why__item">
+						<li class="why__item hidden">
 							<picture>
 								<source srcset="./img/home/why-3.webp" type="image/webp">
 								<img class="why__item-img" src="./img/home/why-3.jpg" alt="Команда">
@@ -518,7 +533,7 @@
 							</div>
 						</li>
 
-						<li class="why__item">
+						<li class="why__item hidden">
 							<picture>
 								<source srcset="./img/home/why-4.webp" type="image/webp">
 								<img class="why__item-img" src="./img/home/why-4.jpg" alt="Поставщик">
@@ -533,7 +548,7 @@
 							</div>
 						</li>
 
-						<li class="why__item">
+						<li class="why__item hidden">
 							<picture>
 								<source srcset="./img/home/why-5.webp" type="image/webp">
 								<img class="why__item-img" src="./img/home/why-5.jpg" alt="Камера">
@@ -548,7 +563,7 @@
 							</div>
 						</li>
 
-						<li class="why__item">
+						<li class="why__item hidden">
 							<picture>
 								<source srcset="./img/home/why-6.webp" type="image/webp">
 								<img class="why__item-img" src="./img/home/why-6.jpg" alt="Договор">
@@ -570,12 +585,12 @@
 			<section class="calculator" id='calculator'>
 				<div class="container">
 					<div class="calculator__inner">
-						<h2 class="calculator__title">
+						<h2 class="calculator__title hidden">
 							Рассчитайте стоимость ремонта <span>за 1 минуту</span> с точностью 99%
 						</h2>
 
 						<div class="calculator__content">
-							<form class="calculator__form" action="#">
+							<form class="calculator__form hidden" action="#">
 								<div class="calculator__box">
 									<p class="calculator__box-title">
 										Тип площади
@@ -700,13 +715,13 @@
 
 								<div class="calculator__btn-wrapper">
 									<button class="calculator__btn btn" type="submit">
-										Отправить заявку
-										<div class="btn-inner"></div>
+										<span class="btn__text">Отправить заявку</span>
+										<div class="btn__inner"></div>
 									</button>
 								</div>
 							</form>
 
-							<div class="calculator__img-wrapper">
+							<div class="calculator__img-wrapper hidden">
 								<picture>
 									<source srcset="./img/home/calculator.webp" type="image/webp">
 									<img class="calculator__img" src="./img/home/calculator.jpg" alt="Квартира">
@@ -716,7 +731,8 @@
 
 						<picture>
 							<source srcset="./img/home/ladder.webp" type="image/webp">
-							<img class="calculator__decor parallax" src="./img/home/ladder.png" alt="Лестница" data-parallax="225">
+							<img class="calculator__decor parallax hidden" src="./img/home/ladder.png" alt="Лестница"
+								data-parallax="125">
 						</picture>
 					</div>
 				</div>
@@ -726,57 +742,56 @@
 			<section class="steps" id="steps">
 				<div class="container container--w1000">
 					<div class="steps__inner">
-						<h2 class="steps__title">
+						<h2 class="steps__title hidden">
 							<span>5 шагов</span> до ремонта вашей мечты
 						</h2>
 
 						<ol class="steps__list">
-							<li class="steps__item">
-								<h4 class="steps__item-title">Заявка</h4>
+							<li class="steps__item hidden">
+								<h4 class="steps__item-title hidden">Заявка</h4>
 
-								<p class="steps__item-text">
+								<p class="steps__item-text hidden">
 									Вы оставляете заявку на сайте или по телефону. Мы договариваемся о встрече для точного замера и
-									расчета
-									стоимости
+									расчета стоимости
 								</p>
 							</li>
 
-							<li class="steps__item">
-								<h4 class="steps__item-title">Замер</h4>
+							<li class="steps__item hidden">
+								<h4 class="steps__item-title hidden">Замер</h4>
 
-								<p class="steps__item-text">
+								<p class="steps__item-text hidden">
 									Мы выезжаем на объект, делаем все необходимые замеры
 								</p>
 							</li>
 
-							<li class="steps__item">
-								<h4 class="steps__item-title">Смета, договор</h4>
+							<li class="steps__item hidden">
+								<h4 class="steps__item-title hidden">Смета, договор</h4>
 
-								<p class="steps__item-text">
+								<p class="steps__item-text hidden">
 									Состовляем точную смету, сроки, а также график платежей
 								</p>
 							</li>
 
-							<li class="steps__item">
-								<h4 class="steps__item-title">Передача ключей</h4>
+							<li class="steps__item hidden">
+								<h4 class="steps__item-title hidden">Передача ключей</h4>
 
-								<p class="steps__item-text">
+								<p class="steps__item-text hidden">
 									После подписания договора вы передаете нам ключи, мы приступаем к работе
 								</p>
 							</li>
 
-							<li class="steps__item">
-								<h4 class="steps__item-title">Ремонт</h4>
+							<li class="steps__item hidden">
+								<h4 class="steps__item-title hidden">Ремонт</h4>
 
-								<p class="steps__item-text">
+								<p class="steps__item-text hidden">
 									Делаем качественный ремонт, утверждая с вами каждый этап работ
 								</p>
 							</li>
 
-							<li class="steps__item">
-								<h4 class="steps__item-title">Принимайте работу!</h4>
+							<li class="steps__item hidden">
+								<h4 class="steps__item-title hidden">Принимайте работу!</h4>
 
-								<p class="steps__item-text">
+								<p class="steps__item-text hidden">
 									Принимайте работу! Получайте ваши ключи, а также уют в вашем доме
 								</p>
 							</li>
@@ -784,35 +799,36 @@
 
 						<picture>
 							<source srcset="./img/home/toolbox.webp" type="image/webp">
-							<img class="steps__img parallax" src="./img/home/toolbox.png" alt="Инструменты" data-parallax="600">
+							<img class="steps__img parallax hidden" src="./img/home/toolbox.png" alt="Инструменты" data-parallax="500"
+								data-order="1">
 						</picture>
 					</div>
 				</div>
 			</section>
 
 
-			<section class="free">
+			<section class="free" id="free">
 				<div class="container">
 					<div class="free__inner">
 						<div class="free__content">
-							<h2 class="free__title">
+							<h2 class="free__title hidden">
 								Закажите замер и предварительную оценку объекта <span>БЕСПЛАТНО</span>
 							</h2>
 
-							<p class="free__text">
+							<p class="free__text hidden">
 								На бесплатном выезде инженер замерщик:
 							</p>
 
 							<ul class="free__list">
-								<li class="free__item">
+								<li class="free__item hidden">
 									Сделает точный замер
 								</li>
 
-								<li class="free__item">
+								<li class="free__item hidden">
 									Сориентирует по срокам
 								</li>
 
-								<li class="free__item">
+								<li class="free__item hidden">
 									Поможет определиться с видом ремонта
 								</li>
 							</ul>
@@ -820,11 +836,11 @@
 
 						<picture>
 							<source srcset="./img/home/surveyor.webp" type="image/webp">
-							<img class="free__decor parallax" src="./img/home/surveyor.png" alt="Измерительный прибор"
-								data-parallax="200">
+							<img class="free__decor parallax hidden" src="./img/home/surveyor.png" alt="Измерительный прибор"
+								data-parallax="125" data-order="3">
 						</picture>
 
-						<div class="free__box">
+						<div class="free__box hidden" data-order='2'>
 							<p class="free__box-title">
 								Укажите ваши контакты
 							</p>
@@ -845,28 +861,30 @@
 								</div>
 
 								<button class="free__send btn" type="submit">
-									ЗАКАЗАТЬ БЕСПЛАТНЫЙ ЗАМЕР
-									<div class="btn-inner"></div>
+									<span class="btn__text">ЗАКАЗАТЬ БЕСПЛАТНЫЙ ЗАМЕР</span>
+									<div class="btn__inner"></div>
 								</button>
 							</form>
 						</div>
 					</div>
 
-					<picture>
-						<source srcset="./img/home/man.webp" type="image/webp">
-						<img class="free__img" src="./img/home/man.png" alt="Строитель">
-					</picture>
+					<div class="free__img-wrapper">
+						<picture>
+							<source srcset="./img/home/man.webp" type="image/webp">
+							<img class="free__img hidden" src="./img/home/man.png" alt="Строитель" data-order="1">
+						</picture>
+					</div>
 				</div>
 			</section>
 
 
-			<section class="feedback">
+			<section class="feedback" id="feedback">
 				<div class="container">
-					<h2 class="feedback__title">
+					<h2 class="feedback__title hidden">
 						<span>Отзывы</span> наших клиентов
 					</h2>
 
-					<div class="feedback__slider">
+					<div class="feedback__slider hidden">
 						<div class="feedback__slider-item">
 							<picture>
 								<source srcset="./img/home/feedback-1.webp" type="image/webp">
@@ -934,14 +952,14 @@
 			</section>
 
 
-			<section class="faq">
+			<section class="faq" id="faq">
 				<div class="container">
-					<h2 class="faq__title">
+					<h2 class="faq__title hidden">
 						Ответы на частые <span>вопросы</span>
 					</h2>
 
 					<ul class="faq__list">
-						<li class="faq__item">
+						<li class="faq__item hidden">
 							<button class="faq__item-btn" type="button">
 								<span class="faq__item-title">
 									Как быстро Вы готовы приступить к ремонту?
@@ -974,7 +992,7 @@
 						</li>
 
 
-						<li class="faq__item">
+						<li class="faq__item hidden">
 							<button class="faq__item-btn" type="button">
 								<span class="faq__item-title">
 									Можно посмотреть Ваши ремонты?
@@ -992,8 +1010,8 @@
 							<div class="faq__item-text">
 								<p>
 									Довольно большое количество работ по выполненным ремонтам можно посмотреть в <a
-										href="#">портфолио</a>,
-									а также в наших <a href="#">видео-обзорах</a>.
+										href="#portfolio">портфолио</a>,
+									а также в наших <a href="#feedback">видео-обзорах</a>.
 								</p><br>
 
 								<p>
@@ -1007,7 +1025,7 @@
 						</li>
 
 
-						<li class="faq__item">
+						<li class="faq__item hidden">
 							<button class="faq__item-btn" type="button">
 								<span class="faq__item-title">
 									Сколько в среднем длится ремонт?
@@ -1030,7 +1048,7 @@
 						</li>
 
 
-						<li class="faq__item">
+						<li class="faq__item hidden">
 							<button class="faq__item-btn" type="button">
 								<span class="faq__item-title">
 									Как происходит оплата?
@@ -1053,7 +1071,7 @@
 						</li>
 
 
-						<li class="faq__item">
+						<li class="faq__item hidden">
 							<button class="faq__item-btn" type="button">
 								<span class="faq__item-title">
 									Как можно сэкономить на ремонте?
@@ -1078,7 +1096,7 @@
 						</li>
 
 
-						<li class="faq__item">
+						<li class="faq__item hidden">
 							<button class="faq__item-btn" type="button">
 								<span class="faq__item-title">
 									Какие гарантии на выполненную работу?
@@ -1100,7 +1118,7 @@
 						</li>
 
 
-						<li class="faq__item">
+						<li class="faq__item hidden">
 							<button class="faq__item-btn" type="button">
 								<span class="faq__item-title">
 									Когда можно вызвать замерщика?
@@ -1126,7 +1144,7 @@
 						</li>
 
 
-						<li class="faq__item">
+						<li class="faq__item hidden">
 							<button class="faq__item-btn" type="button">
 								<span class="faq__item-title">
 									Изменится ли стоимость в процессе ремонта?
@@ -1148,8 +1166,8 @@
 						</li>
 					</ul>
 
-					<div class="faq__link-wrapper">
-						<a class="faq__link" href="#">
+					<div class="faq__link-wrapper hidden">
+						<a class="faq__link" href="#consultation" data-link="modal">
 							Не нашли нужного ответа? Напишите нам!
 						</a>
 					</div>
@@ -1157,51 +1175,51 @@
 			</section>
 
 
-			<section class="contacts">
+			<section class="contacts" id="portfolio">
 				<div class="container">
 					<div class="contacts__inner">
 						<div class="contacts__box">
-							<h2 class="contacts__title">
+							<h2 class="contacts__title hidden">
 								<span>Связаться</span> с нами
 							</h2>
 
 							<dl class="contacts__list">
 								<div class="contacts__item">
-									<dt class="contacts__item-title">
+									<dt class="contacts__item-title hidden">
 										E-mail
 									</dt>
 
-									<dd class="contacts__item-descr">
+									<dd class="contacts__item-descr hidden">
 										<a class="contacts__link" href="mailto:infome@astroy.ru">infome@astroy.ru</a>
 									</dd>
 								</div>
 
 								<div class="contacts__item">
-									<dt class="contacts__item-title">
+									<dt class="contacts__item-title hidden">
 										Телефон
 									</dt>
 
-									<dd class="contacts__item-descr">
+									<dd class="contacts__item-descr hidden">
 										<a class="contacts__link" href="tel:+79899009090">+7 (989) 900-90-90</a>
 									</dd>
 								</div>
 
 								<div class="contacts__item">
-									<dt class="contacts__item-title">
+									<dt class="contacts__item-title hidden">
 										Главный офис
 									</dt>
 
-									<dd class="contacts__item-descr">
+									<dd class="contacts__item-descr hidden">
 										г. Тюмень, ул. Рационализаторов, дом 20, стр. 1
 									</dd>
 								</div>
 
 								<div class="contacts__item">
-									<dt class="contacts__item-title">
+									<dt class="contacts__item-title hidden">
 										График работы
 									</dt>
 
-									<dd class="contacts__item-descr">
+									<dd class="contacts__item-descr hidden">
 										с 8:00 до 18:00
 									</dd>
 								</div>
@@ -1221,6 +1239,54 @@
 				</div>
 			</section>
 		</main>
+
+		<a class="mainbox__top" href="#banner">
+			<svg class="mainbox__top-icon" width="30" height="18" viewBox="0 0 30 18" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<rect x="2.97925" y="0.878662" width="20" height="3" rx="1.5" transform="rotate(45 2.97925 0.878662)" />
+				<rect x="29.1421" y="3" width="20" height="3" rx="1.5" transform="rotate(135 29.1421 3)" />
+			</svg>
+		</a>
+
+		<div class="modal" id="consultation">
+			<div class="modal__content">
+				<h3 class="modal__title">Бесплатная консультация</h3>
+
+				<p class="modal__text">
+					Заполните поля и мы перезвоним вам, чтобы ответить на все ваши вопросы
+				</p>
+
+				<button class="modal__close" type="button">
+					<img class="modal__close-icon" src="./img/icons/close.svg" alt="Закрыть окно">
+				</button>
+
+				<form class="modal__form" action="#">
+					<div class="modal__box">
+						<div class="modal__input-wrapper input-wrapper">
+							<input class="modal__input input" type="text" name="consultation-name" id="consultation-name" required>
+							<label class="modal__label label" for="consultation-name">Ваше имя*</label>
+						</div>
+
+						<div class="modal__input-wrapper input-wrapper">
+							<input class="modal__input input phone" type="tel" name="consultation-phone" id="consultation-phone"
+								required>
+							<label class="modal__label label" for="consultation-phone">Ваш телефон*</label>
+						</div>
+
+						<div class="modal__input-wrapper input-wrapper">
+							<textarea class="modal__textarea textarea" name="consultation-question"
+								id="consultation-question"></textarea>
+							<label class="modal__label label" for="consultation-question">Ваш вопрос</label>
+						</div>
+					</div>
+
+					<button class="modal__send btn" type="submit">
+						<span class="btn__text">Отправить заявку</span>
+						<div class="btn__inner"></div>
+					</button>
+				</form>
+			</div>
+		</div>
 
 		@@include('./components/footer.html')
 	</div>

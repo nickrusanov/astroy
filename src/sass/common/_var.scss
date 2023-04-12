@@ -1,6 +1,35 @@
 // FONTS
 
-$fonts-root: '../fonts/';
+$fonts-root: "../fonts/";
+
+:root {
+	--font-size-title: 2rem;
+	--font-size-title-2: 1.2rem;
+	--font-size-title-3: 1.5rem;
+	--font-size-subtitle: 1.25rem;
+	--font-size-text: 1rem;
+}
+
+// COLORS
+
+:root {
+	--color-primary-rgb: 89, 62, 13;
+	--color-primary: rgb(var(--color-primary-rgb));
+	--color-primary-25: rgba(var(--color-primary-rgb), 0.25);
+	--color-primary-50: rgba(var(--color-primary-rgb), 0.5);
+	--color-primary-light: #c88300;
+	--color-secondary: #ffb31b;
+	--color-secondary-light: #f0e5d0;
+	--color-grey: #e8e8e8;
+	--color-grey-dark: #a8a8a8;
+}
+
+// SPACES
+
+:root {
+	--margin-section: 150px;
+	--margin-element: 40px;
+}
 
 // MEDIA
 
@@ -8,3 +37,12 @@ $screen-sm: 480px;
 $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
+
+// LAYERS
+
+$layer-1: 1; // Elements in flow
+$layer-2: 2; // Elements in flow
+$layer-3: 3; // Masks
+$layer-4: 4; // Sidebars
+$layer-5: 5; // Modals
+$layer-6: 6; // Covering all

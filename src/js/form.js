@@ -8,9 +8,41 @@ $(window).on('load', function () {
 			$('.label')[i].classList.add('label--active');
 		})
 
+		$(el).on('focus', () => {
+			$('.label')[i].classList.add('label--active');
+		})
+
 		$(el).on('blur', () => {
 			if (el.value.length === 0 || el.value.includes('_')) {
 				$('.label')[i].classList.remove('label--active');
+			}
+		})
+	})
+
+	$('.textarea').each((i, textarea) => {
+		$(textarea).on('click', () => {
+			$('.label').each((i, label) => {
+				if (label.parentElement === textarea.parentElement) {
+					label.classList.add('label--active');
+				}
+			})
+		})
+
+		$(textarea).on('focus', () => {
+			$('.label').each((i, label) => {
+				if (label.parentElement === textarea.parentElement) {
+					label.classList.add('label--active');
+				}
+			})
+		})
+
+		$(textarea).on('blur', () => {
+			if (textarea.value.length === 0) {
+				$('.label').each((i, label) => {
+					if (label.parentElement === textarea.parentElement) {
+						label.classList.remove('label--active');
+					}
+				})
 			}
 		})
 	})
