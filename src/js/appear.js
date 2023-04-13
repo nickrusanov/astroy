@@ -1,8 +1,6 @@
 import $ from 'jquery';
 
 $(window).on('load', function () {
-	$('.hidden');
-
 	const elementAppear = (entries) => {
 		let order = 1;
 		entries.forEach(entry => {

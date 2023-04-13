@@ -2248,35 +2248,35 @@ table {
 
 @-webkit-keyframes arrow-down-move {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 
   40% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
   }
 
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 }
 
 @keyframes arrow-down-move {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 
   40% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translate(-50%, 20px);
+            transform: translate(-50%, 20px);
   }
 
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 }
 
@@ -2709,6 +2709,7 @@ main {
   max-width: 600px;
   max-height: 100vh;
   padding: 40px;
+  overflow: auto;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -4944,6 +4945,10 @@ main {
     display: none;
   }
 
+  .banner__down-wrapper {
+    bottom: 40px;
+  }
+
   .tariffs__item-picture {
     display: none;
   }
@@ -5233,6 +5238,12 @@ main {
     border-radius: 0;
   }
 }
+
+@media (max-height: 700px) {
+  .banner__down-wrapper {
+    display: none;
+  }
+}
 @supports (-webkit-appearance:none){
 .banner{background:-webkit-gradient(linear, left top, right top, color-stop(20%, rgba(255, 255, 255, 0.98)), color-stop(70%, transparent)), center/cover no-repeat url(../img/home/banner-bg.webp);background:-o-linear-gradient(left, rgba(255, 255, 255, 0.98) 20%, transparent 70%), center/cover no-repeat url(../img/home/banner-bg.webp);background:linear-gradient(90deg, rgba(255, 255, 255, 0.98) 20%, transparent 70%), center/cover no-repeat url(../img/home/banner-bg.webp)}
 .banner__btn-img::after{background:center/contain no-repeat url(../img/home/smeta.webp)}
@@ -5336,6 +5347,14 @@ main {
 }
 
  @media (max-height: 620px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-height: 700px){
 
 @supports (-webkit-appearance:none){
 

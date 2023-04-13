@@ -2,6 +2,8 @@ import $ from 'jquery';
 import 'slick-carousel';
 
 $(window).on('load', function () {
+	// SETTINGS
+
 	$('.feedback__slider').slick({
 		dots: true,
 		arrows: false,
@@ -19,7 +21,7 @@ $(window).on('load', function () {
 		infinite: true,
 		autoplay: true,
 		autoplaySpeed: 3500,
-		speed: 1000,
+		speed: 800,
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		prevArrow: '<button type="button" class="brands__btn-prev" aria-label="Предыдущий слайд"><svg width="32" height="74" viewBox="0 0 32 74" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 1L2 39L30 73" stroke-width="3"/></svg></button>',
@@ -39,5 +41,22 @@ $(window).on('load', function () {
 				}
 			},
 		]
+	})
+
+	// PLAY BY OBSERVER
+
+	const slickPlayStart = (entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				$(entry.target).slick('slickPlay');
+			}
+		})
+	}
+
+	const slickObserver = new IntersectionObserver(slickPlayStart, { threshold: 0.35 });
+
+	$('.slick-slider').each((i, el) => {
+		$(el).slick('slickPause');
+		slickObserver.observe(el);
 	})
 })

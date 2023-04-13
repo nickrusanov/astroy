@@ -1707,6 +1707,10 @@
 		display: none;
 	}
 
+	.banner__down-wrapper {
+		bottom: 40px;
+	}
+
 	.tariffs__item-picture {
 		display: none;
 	}
@@ -1787,5 +1791,11 @@
 
 	.feedback__img {
 		min-height: 200px;
+	}
+}
+
+@media (max-height: 700px) {
+	.banner__down-wrapper {
+		display: none;
 	}
 }
