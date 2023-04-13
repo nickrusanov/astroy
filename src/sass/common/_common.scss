@@ -165,14 +165,6 @@ main {
 	}
 }
 
-.section-anchor {
-	position: absolute;
-	left: 0;
-	top: 0;
-
-	color: var(--color-primary);
-}
-
 .btn {
 	@include appear-down(0.2s);
 
@@ -263,12 +255,16 @@ main {
 }
 
 .input-wrapper {
+	@extend %trans-fast;
+
 	position: relative;
 
 	margin-bottom: 20px;
 	padding-top: 24px;
 
 	&::after {
+		@extend %trans-fast;
+
 		content: "";
 		width: 100%;
 		height: 1px;
@@ -285,12 +281,38 @@ main {
 	}
 }
 
+.alert {
+	height: 20px;
+	margin-top: 20px;
+
+	font-size: .8rem;
+	text-align: center;
+
+	&--send {
+		color: green;
+	}
+
+	&--error {
+		color: red;
+	}
+}
+
 .input {
 	width: 100%;
 	margin-bottom: 10px;
 
+	position: relative;
+
 	&:focus {
 		outline: none;
+	}
+}
+
+.error {
+	color: red;
+
+	&::after {
+		background-color: red;
 	}
 }
 
@@ -515,7 +537,7 @@ main {
 	}
 
 	.input:hover + .label,
-	.textarea:hover + .label{
+	.textarea:hover + .label {
 		color: var(--color-primary);
 	}
 
@@ -543,14 +565,14 @@ main {
 }
 
 @include xl {
-	html {
+	:root {
 		--margin-section: 100px;
 		--margin-element: 20px;
 	}
 }
 
 @include md {
-	html {
+	:root {
 		--margin-section: 50px;
 	}
 
@@ -563,7 +585,7 @@ main {
 }
 
 @include media(600px) {
-	html {
+	:root {
 		--font-size-title: 1.6rem;
 		--font-size-subtitle: 1rem;
 		--font-size-text: 0.9rem;

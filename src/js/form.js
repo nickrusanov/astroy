@@ -204,4 +204,51 @@ $(window).on('load', function () {
 	$('.calculator__range-input').on('touchmove', priceShow);
 
 	priceShow();
+
+
+	// SUBMIT VALID
+
+	$.fn.isValid = function () {
+		return this[0].checkValidity();
+	}
+
+	const validCheck = () => {
+		if ($('#' + event.target.id).isValid()) {
+			$('#' + event.target.id).parent().removeClass('error');
+			$('#' + event.target.id).off('keyup', validCheck);
+		}
+	}
+
+	$('form').each((i, el) => {
+		$(el).on('submit', event => {
+			event.preventDefault();
+
+			let formValid = true;
+			const formData = new FormData(el);
+
+			for (var key of formData.keys()) {
+				if ($(`[name=${key}]`).prop('type') !== 'radio') {
+					if ($('#' + key).isValid()) {
+						$('#' + key).parent().removeClass('error');
+						$('#' + key).off('keyup', validCheck);
+					} else {
+						$('#' + key).parent().addClass('error');
+						$('#' + key).on('keyup', validCheck);
+						formValid = false;
+					}
+				}
+			}
+
+			$(el.lastElementChild).removeClass('alert--error');
+			$(el.lastElementChild).removeClass('alert--send');
+
+			if (formValid) {
+				$(el.lastElementChild).text('Заявка отправлена');
+				$(el.lastElementChild).addClass('alert--send');
+			} else {
+				$(el.lastElementChild).text('Заполните правильно поля');
+				$(el.lastElementChild).addClass('alert--error');
+			}
+		})
+	})
 })

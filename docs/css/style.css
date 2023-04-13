@@ -2115,6 +2115,8 @@ table {
 .input.phone,
 .label,
 .textarea,
+.input-wrapper::after,
+.input-wrapper,
 .social__descr,
 .social__icon,
 .mainbox__top-icon rect,
@@ -2448,13 +2450,6 @@ main {
   border-color: var(--color-secondary-light) transparent transparent transparent;
 }
 
-.section-anchor {
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--color-primary);
-}
-
 .btn {
   -webkit-transition: all 0.2s ease, -webkit-transform 0.4s ease;
   transition: all 0.2s ease, -webkit-transform 0.4s ease;
@@ -2584,13 +2579,37 @@ main {
   margin-bottom: calc(var(--margin-element) * 1.5);
 }
 
+.alert {
+  height: 20px;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.alert--send {
+  color: green;
+}
+
+.alert--error {
+  color: red;
+}
+
 .input {
   width: 100%;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .input:focus {
   outline: none;
+}
+
+.error {
+  color: red;
+}
+
+.error::after {
+  background-color: red;
 }
 
 .textarea {
@@ -3745,6 +3764,7 @@ main {
 }
 
 .calculator__img {
+  height: 100%;
   max-height: 85%;
   width: 100%;
   -o-object-fit: cover;
@@ -4429,11 +4449,7 @@ main {
 
 .contacts__map {
   width: 100%;
-}
-
-.contacts__map iframe {
-  width: 100%;
-  height: 100%;
+  border-radius: 10px;
 }
 
 /* MEDIA
@@ -4459,7 +4475,7 @@ main {
 }
 
 @media (max-width: 1200px) {
-  html {
+  :root {
     --margin-section: 100px;
     --margin-element: 20px;
   }
@@ -4609,6 +4625,10 @@ main {
     gap: 20px;
   }
 
+  .calculator__img {
+    max-height: 100%;
+  }
+
   .steps__item-text {
     max-width: none;
   }
@@ -4753,7 +4773,7 @@ main {
 }
 
 @media (max-width: 768px) {
-  html {
+  :root {
     --margin-section: 50px;
   }
 
@@ -4787,7 +4807,7 @@ main {
 }
 
 @media (max-width: 600px) {
-  html {
+  :root {
     --font-size-title: 1.6rem;
     --font-size-subtitle: 1rem;
     --font-size-text: 0.9rem;
