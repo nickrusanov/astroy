@@ -487,6 +487,7 @@
 	&__radio {
 		width: 0;
 		height: 0;
+		opacity: 0;
 	}
 
 	&__label {
@@ -998,6 +999,7 @@
 
 		position: absolute;
 		top: 50%;
+		transform-origin: center;
 
 		path {
 			@extend %trans;
@@ -1277,8 +1279,7 @@
 	}
 
 	.brands__btn-next:active {
-		transform: translateY(-50%) scale(0.8) rotate(180deg);
-		transform-origin: center;
+		transform: translateY(-50%) rotate(180deg) scale(0.8);
 	}
 
 	.tariffs__item:hover {

@@ -513,10 +513,6 @@ main {
 	}
 
 	.social__link {
-		&:hover .social__icon {
-			transform: scale(1.1);
-		}
-
 		&:hover + .social__descr {
 			top: -36px;
 
